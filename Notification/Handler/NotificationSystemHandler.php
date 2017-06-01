@@ -11,7 +11,7 @@ namespace GitSSH2\NotificationBundle\Notification\Handler;
 
 use GitSSH2\NotificationBundle\Notification\NotificationEntityInterface;
 use \GitSSH2\NotificationBundle\Notification\Handler\NotificationHandlerInterface;
-use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 
 class NotificationSystemHandler implements NotificationHandlerInterface
 {
@@ -23,7 +23,7 @@ class NotificationSystemHandler implements NotificationHandlerInterface
      */
     protected $em;
     
-    public function __construct(EntityManager $em)
+    public function __construct(EntityManagerInterface $em)
     {
         $this->em = $em;
     }
@@ -46,6 +46,10 @@ class NotificationSystemHandler implements NotificationHandlerInterface
      */
     public function canHandle(NotificationEntityInterface $notification)
     {
-        return true;
+        if ($notification instanceof \GitSSH2\NotificationBundle\Entity\Notification) {     
+            return true;
+        }else{
+            return false;
+        }
     }
 }
