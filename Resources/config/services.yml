@@ -1,0 +1,14 @@
+services:
+    git_ssh2_notification.handler.system:
+        class: GitSSH2\NotificationBundle\Notification\Handler\NotificationSystemHandler
+        arguments: ["@doctrine.orm.entity_manager"]
+
+    git_ssh2_notification.manager:
+        class: GitSSH2\NotificationBundle\Notification\Manager\NotificationManager
+        arguments: [["@git_ssh2_notification.handler.system"]]
+
+    git_ssh2_notificationn.eventlistener:
+        class: GitSSH2\NotificationBundle\Notification\EventListener\NotificationEventListener
+        arguments: ["@gitssh2.notification.manager"]
+        tags:
+            - { name: kernel.event_listener, event: gitssh2.notification, method: manageNotification }
