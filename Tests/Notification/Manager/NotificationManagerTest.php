@@ -13,7 +13,7 @@ use GitSSH2\NotificationBundle\Notification\Manager\NotificationManager;
 use GitSSH2\NotificationBundle\Notification\Handler\NotificationSystemHandler;
 use Doctrine\ORM\EntityManagerInterface;
 use GitSSH2\NotificationBundle\Entity\Notification;
-
+use GitSSH2\NotificationBundle\Tests\NotificationTestCase;
 
 
 /**
@@ -21,7 +21,7 @@ use GitSSH2\NotificationBundle\Entity\Notification;
  *
  * @author Paul Schweppe <paulschweppe@gmail.com>
  */
-class NotificationManagerTest extends \PHPUnit_Framework_TestCase
+class NotificationManagerTest extends NotificationTestCase
 {
     /**
      * @expectedException GitSSH2\NotificationBundle\Exception\InvalidNotificationHandlerException

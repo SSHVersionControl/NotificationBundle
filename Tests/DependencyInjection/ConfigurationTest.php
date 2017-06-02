@@ -10,9 +10,9 @@
 namespace GitSSH2\NotificationBundle\Tests\DependencyInjection;
 
 use GitSSH2\NotificationBundle\DependencyInjection\Configuration;
-use Symfony\Component\Config\Definition\Processor;
+use GitSSH2\NotificationBundle\Tests\NotificationTestCase;
 
-class ConfigurationTest extends \PHPUnit_Framework_TestCase
+class ConfigurationTest extends NotificationTestCase
 {
     public function testGetConfigTreeBuilderReturnsTreeBuilderIntance()
     {
