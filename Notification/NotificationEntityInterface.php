@@ -21,4 +21,16 @@ interface NotificationEntityInterface
      * @return int
      */
     public function getId();
+    
+    /**
+     * Get title
+     * @return string
+     */
+    public function getTitle();
+
+    /**
+     * Get message
+     * @return string
+     */
+    public function getMessage();
 }

@@ -44,7 +44,7 @@ The default configuration is to use system handler. You can create you own handl
 
 ## Usage
 This bundle is a bases for a simple notification system. To trigger and notification you just need to 
-use symfony's event dispatcher e.g.
+use Symfony's event dispatcher e.g.
 
     <?php
 
