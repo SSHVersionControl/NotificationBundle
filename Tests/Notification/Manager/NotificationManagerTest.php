@@ -38,7 +38,7 @@ class NotificationManagerTest extends NotificationTestCase
     public function testValidHandler(){
         
         $entityManager = $this
-            ->getMockBuilder(EntityManagerInterface::class)
+            ->getMockBuilder('Doctrine\ORM\EntityManager')
             ->disableOriginalConstructor()
             ->getMock();
         
