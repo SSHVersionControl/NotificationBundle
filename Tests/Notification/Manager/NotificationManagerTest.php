@@ -39,6 +39,7 @@ class NotificationManagerTest extends NotificationTestCase
         
         $entityManager = $this
             ->getMockBuilder(EntityManager::class)
+            ->setMethods(array('persist', 'flush'))
             ->disableOriginalConstructor()
             ->getMock();
         
