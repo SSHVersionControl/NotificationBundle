@@ -20,7 +20,6 @@ before_install:
   - composer self-update
   - sh -c 'if [ "$SYMFONY_VERSION" != "" ]; then composer require --no-update symfony/symfony=$SYMFONY_VERSION; fi;'
   
-install: 
-    -composer install
+install: composer install
 
 script: ./vendor/bin/phpunit
