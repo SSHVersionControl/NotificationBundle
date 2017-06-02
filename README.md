@@ -1,4 +1,4 @@
-Simple Notification Bundle  [![Build Status](https://travis-ci.org/SSHVersionControl/git-web-client.svg?branch=master)](https://travis-ci.org/SSHVersionControl/git-web-client) 
+Simple Notification Bundle  [![Build Status](https://travis-ci.org/SSHVersionControl/NotificationBundle.svg?branch=master)](https://travis-ci.org/SSHVersionControl/NotificationBundle) 
 ========================
 
 ## Installation
