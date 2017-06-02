@@ -27,7 +27,7 @@ class NotificationSystemHandlerTest extends NotificationTestCase
     public function testCanHandleNotificationEntity(){
         
         $entityManager = $this
-            ->getMockBuilder('Doctrine\ORM\EntityManager')
+            ->getMockBuilder(EntityManager::class)
             ->disableOriginalConstructor()
             ->getMock();
         

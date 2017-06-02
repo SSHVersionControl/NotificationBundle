@@ -11,7 +11,7 @@ namespace GitSSH2\NotificationBundle\Tests\Notification\Manager;
 
 use GitSSH2\NotificationBundle\Notification\Manager\NotificationManager;
 use GitSSH2\NotificationBundle\Notification\Handler\NotificationSystemHandler;
-use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\EntityManager;
 use GitSSH2\NotificationBundle\Entity\Notification;
 use GitSSH2\NotificationBundle\Tests\NotificationTestCase;
 
@@ -38,7 +38,7 @@ class NotificationManagerTest extends NotificationTestCase
     public function testValidHandler(){
         
         $entityManager = $this
-            ->getMockBuilder('Doctrine\ORM\EntityManager')
+            ->getMockBuilder(EntityManager::class)
             ->disableOriginalConstructor()
             ->getMock();
         
