@@ -174,53 +174,76 @@ class Notification implements NotificationEntityInterface
         $this->updateDate = new \DateTime();
     }
 
+    /**
+     * Get title
+     * @return string
+     */
     public function getTitle()
     {
         return $this->title;
     }
 
+    /**
+     * Get message
+     * @return string
+     */
     public function getMessage()
     {
         return $this->message;
     }
 
+    /**
+     * Get notification tag
+     * @return \GitSSH2\NotificationBundle\Entity\Notification\NotificationTag | null
+     */
     public function getNotificationTag()
     {
         return $this->fcNotificationTag;
     }
 
+    /**
+     * Get read status
+     * @return boolean
+     */
     public function getReaded()
     {
         return $this->readed;
     }
 
+    /**
+     * Set Title
+     * @param string $title
+     */
     public function setTitle($title)
     {
         $this->title = $title;
     }
 
+    /**
+     * Set message
+     * @param string $message
+     */
     public function setMessage($message)
     {
         $this->message = $message;
     }
 
+    /**
+     * Set Notification Tag
+     * @param \GitSSH2\NotificationBundle\Entity\Notification\NotificationTag $fcNotificationTag
+     */
     public function setNotificationTag(\GitSSH2\NotificationBundle\Entity\Notification\NotificationTag $fcNotificationTag)
     {
         $this->fcNotificationTag = $fcNotificationTag;
     }
 
+    /**
+     * Set read status
+     * @param boolean $readed
+     */
     public function setReaded($readed)
     {
         $this->readed = $readed;
     }
     
-    public function getLink()
-    {
-        return $this->link;
-    }
-
-    public function setLink($link)
-    {
-        $this->link = $link;
-    }
 }

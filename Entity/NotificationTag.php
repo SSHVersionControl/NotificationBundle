@@ -56,11 +56,19 @@ class FcNotificationTag
         return $this->id;
     }
 
+    /**
+     * Get title
+     * @return string
+     */
     public function getTitle()
     {
         return $this->title;
     }
 
+    /**
+     * Set title
+     * @param string $title
+     */
     public function setTitle($title)
     {
         $this->title = $title;
